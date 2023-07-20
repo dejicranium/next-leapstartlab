@@ -115,7 +115,7 @@ export default function Home() {
           <div className={styles.groups} id="experiments">
             <div className={styles.groups__container}>
               <h3 className={styles.groups__header}>Experiments</h3>
-              <p>We love experiments and always try to see possibilities</p>
+              <p>We love experiments and are always keen to try out new possibilities</p>
               <div className={styles.groups__experiments}>
                 <ExperimentsContainer experiments={experiments}></ExperimentsContainer>
                
