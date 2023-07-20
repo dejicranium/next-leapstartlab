@@ -15,6 +15,10 @@
         justify-content: space-evenly;
         margin: auto;
         width: 80%;
+
+        @media screen and (max-width: 768px){
+            width: 90%;
+         }
     }
 
     &__links {

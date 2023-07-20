@@ -19,6 +19,7 @@ $text-color:       rgb(219, 219, 219);
 
         @media screen and (max-width: 768px) {
           flex-direction: column;
+          width: 90%;
         }
 
         h1 {
@@ -67,6 +68,9 @@ $text-color:       rgb(219, 219, 219);
         margin: auto;
         color: whitesmoke;
         padding: 60px 0;
+        @media screen and (max-width: 768px){
+          width: 90%;
+       }
 
         
     }
@@ -121,6 +125,8 @@ $text-color:       rgb(219, 219, 219);
       border-radius: 20px;
 
       
+
+      
     }
     &__trusted {
       text-align: center;
@@ -132,6 +138,11 @@ $text-color:       rgb(219, 219, 219);
     &__companies {
       display: flex;
       justify-content: center;
+      
+      @media screen and (max-width: 768px){
+        display: grid;
+        grid-template-columns: 100%;
+      }
     }
 
     &__header {
@@ -156,6 +167,9 @@ $text-color:       rgb(219, 219, 219);
         margin: auto;
         margin-top: 60px;
         margin-bottom: 120px;
+        @media screen and (max-width: 768px){
+          width: 90%;
+       }
 
       
      
@@ -207,10 +221,12 @@ $text-color:       rgb(219, 219, 219);
   border-top-right-radius: 20px; 
   border-bottom-left-radius: 20px; 
   margin-bottom: 120px;
-
   @media screen and (max-width: 1020px) {
     display: flex;
     flex-direction: column;
+  }
+  @media screen and (max-width: 768px){
+    width: 90%;
   }
 
   h3 {
