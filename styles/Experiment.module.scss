@@ -6,6 +6,10 @@
     padding: 24px;
     border-radius: 10px;
     margin-bottom: 32px;
+    
+    @media screen and (max-width: 786px) {
+        margin-bottom: 16px;
+    }
 
     &__thumbnail {
             object-fit: contain;
