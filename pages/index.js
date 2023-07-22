@@ -8,6 +8,7 @@ import { Experiment } from '../components/Experiment';
 import { ExperimentsContainer } from '../components/ExperimentsContainer';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
+import { Button } from '../components/Button';
 
 export default function Home() {
   const experiments = [
@@ -15,6 +16,51 @@ export default function Home() {
       {video_link: "https://youtube.com/embed/z8vQ1zMFt2I"}, 
       {video_link: "https://youtube.com/embed/6pz8WCWwrFw"},
   ]
+
+  const projects = [
+    {
+      name: "FocusTug",
+      thumbnail: "https://i.ibb.co/6tp2KhX/Screenshot-2023-07-01-at-12-40-04.png",
+      description: "The AI productivity web extension",
+      link: "https://www.focustug.com"
+
+    },
+    {
+      name: "Waypal",
+      thumbnail: "https://i.ibb.co/fQsLhGh/Screenshot-2023-07-20-at-03-56-20.png",
+      description: "Find travel partners to the same destination",
+      link: "http://waypal.co"
+
+    },
+    {
+      name: "Afflee",
+      thumbnail: "https://i.ibb.co/WWhSWFR/Screenshot-2023-07-20-at-03-58-46.png",
+      description: "Connect with African freelance marketers to push your products.",
+      link: "https://www.afflee.com"
+
+    },
+    {
+      name: "PointsBud",
+      thumbnail: "https://i.ibb.co/KDjpMDY/Screenshot-2023-07-20-at-04-02-16.png",
+      description: "Customer retention platform for restaurants",
+      link: "https://www.pointsbud.com/menu/circa-lagos"
+
+    },
+    {
+      name: "Lendsqr V1 APIs",
+      thumbnail: "https://i.ibb.co/tYz2pkQ/Screenshot-2023-07-20-at-04-03-53.png",
+      description: "Lending infrastructure for financial institutions",
+      link: "https://lendsqr.com"
+
+    },
+      {name: "OpenBanking Nigeria APIs",
+      thumbnail: "https://i.ibb.co/G95009n/Screenshot-2023-07-20-at-04-07-53.png",
+      description: "APIs for Open Banking in Nigeria",
+      link: "https://openbanking.ng"
+    }
+  ]
+
+
 
   const flutterwaveStyle = {
     filter: "brightness(0.5) invert(1)"
@@ -38,7 +84,7 @@ export default function Home() {
               <a href='#about'>About</a>
               <a href='#projects'>Projects</a>
               <a href='#experiments'>Experiments</a>
-              <a className={styles.header__ctas__button} href='#experiments'>Contact</a>
+              <a className={styles.header__ctas__button} href='#contact'>Contact</a>
 
            </div>
 
@@ -79,12 +125,12 @@ export default function Home() {
               <h3 className={styles.groups__header}>Projects</h3>
               <p>Here are some samples of our work...</p>
               <div className={styles.groups__products}>
-                <Project name="FocusTug" thumbnail="https://i.ibb.co/6tp2KhX/Screenshot-2023-07-01-at-12-40-04.png"></Project>
-                <Project name="Waypal" thumbnail="https://i.ibb.co/fQsLhGh/Screenshot-2023-07-20-at-03-56-20.png"></Project>
-                <Project  name="Afflee" thumbnail="https://i.ibb.co/WWhSWFR/Screenshot-2023-07-20-at-03-58-46.png"></Project>
-                <Project  name="PointsBud" thumbnail="https://i.ibb.co/KDjpMDY/Screenshot-2023-07-20-at-04-02-16.png"></Project>
-                <Project name="Lendsqr v1 APIs" thumbnail="https://i.ibb.co/tYz2pkQ/Screenshot-2023-07-20-at-04-03-53.png"></Project>
-                <Project name="OpenBanking APIs" thumbnail="https://i.ibb.co/G95009n/Screenshot-2023-07-20-at-04-07-53.png"></Project>
+                {projects && projects.map((project, index)=> (
+                  <Project link={project.link} key={index} name={project.name} thumbnail={project.thumbnail} description={project.description}>
+
+                  </Project>
+                ))}
+               
               </div>
              
             </div>
@@ -102,7 +148,7 @@ export default function Home() {
               Whether you're a visionary founder seeking to bring your product to life or looking to streamline your operations with cutting-edge automations, our expert team is here to guide you every step of the way. Reach out to us now and let's embark on a journey to achieve your goals together!
               </p>
 
-              <button>Tell Us About Your Project</button>
+              <Button text="Tell us about your project" onClick={()=>{document.getElementById('contact').scrollIntoView(true)}}></Button>
 
             </div>
 
@@ -142,6 +188,14 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+        h1,h2,h3,h4 {
+          font-family: 'Quicksand', sans-serif !important;        
+        }
+        p, a, input, {
+          font-family: 'Montserrat', sans-serif;
+        }
+
+
       `}</style>
     </div>
   )

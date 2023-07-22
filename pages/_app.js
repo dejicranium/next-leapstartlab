@@ -13,20 +13,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head> 
         
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>      </Head>
-      <style>
-        {
-          `
-            h1,h2,h3,h4 {
-              font-family: 'Quicksand', sans-serif !important;        
-            }
-            p, a, input, {
-              font-family: 'Montserrat', sans-serif;
-            }
-
-          `
-        }
-        
-      </style>
+      
     <main>
       <Component {...pageProps} />
     </main>

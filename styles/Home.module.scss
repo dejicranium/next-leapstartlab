@@ -132,7 +132,7 @@ $text-color:       rgb(219, 219, 219);
       padding: 10px 16px;
       border-radius: 20px;
       background-color: rgba(228, 228, 223, 0.107);
-      border: 2px solid whitesmoke;
+      border: 2px solid darkgrey;
 
       @media screen and (max-width: 768px) {
         width: 90%;
@@ -207,11 +207,13 @@ $text-color:       rgb(219, 219, 219);
     p {
       font-size: 16px;
       color:  rgb(219, 219, 219);
+      line-height: 26px;
     }
 
     &__header {
         font-size: 30px;
         color: rgb(219, 219, 219);
+        line-height: 1px
     }
 
     &__products {

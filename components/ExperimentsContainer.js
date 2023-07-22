@@ -12,7 +12,7 @@ export function ExperimentsContainer(props) {
         <div className={styles.experiments__container}>
 
             {experiments_to_show.map((experiment, index)=> (
-                <Experiment video_link={experiment.video_link}></Experiment>
+                <Experiment key={index} video_link={experiment.video_link}></Experiment>
             ))} 
         </div>
         {

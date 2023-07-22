@@ -6,7 +6,7 @@
     border-radius: 10px;
     margin-bottom: 32px;
     cursor: pointer;
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.5s;
 
     @media screen and (max-width: 768px) {
         width: 100%;
@@ -14,6 +14,7 @@
 
     &:hover {
         transform: scale(1.05);
+        filter: brightness(1.1);
     }
 
     &__thumbnail {
@@ -31,16 +32,28 @@
         align-items: center;
         margin-bottom: 16px;
 
-        &__name {
+        &__name, &__description {
             color: rgb(228, 226, 226);
             font-size: 18px;
             letter-spacing: 0.5px;
             margin-block: 0;
             font-weight: 500;
-            text-align: center;
+            text-align: left;
             text-decoration: underline;
             text-decoration-color: teal;
+            display: block;
+            line-height: 32px;
         }
+
+        &__description { 
+            text-decoration: none;
+            color: darkgrey !important;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 26px;
+        }
+
+        
     }
 }
 

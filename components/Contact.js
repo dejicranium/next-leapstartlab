@@ -7,7 +7,7 @@ export function Contact({video_link}) {
         justifyContent: 'flex-end',
         padding: "0"
     }
-    return <div className={styles.contact}>
+    return <div id="contact" className={styles.contact}>
        <div className={styles.contact__container}>
             <div>
                 <h3>Questions?</h3>
