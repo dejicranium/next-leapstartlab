@@ -104,8 +104,8 @@ export default function Home() {
                 </div>
               </h2>
 
-              <p className={styles.hero__lead}>Turn your ideas into reality</p>
-              <p className={styles.hero__subline}>We help founders launch products and automate their business processes.</p>
+              <p className={styles.hero__lead}>Turning ideas into reality...</p>
+              <p className={styles.hero__subline}>We build software products and automate business processes.</p>
 
               <div className={styles.hero__trusted__container}>
                 <p className={styles.hero__trusted}>Trusted by</p>
