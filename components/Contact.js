@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from "../styles/Contact.module.scss"
 import { Button } from "./Button"
 export function Contact({video_link}) {
@@ -6,6 +7,20 @@ export function Contact({video_link}) {
         display: 'flex',
         justifyContent: 'flex-end',
         padding: "0"
+    }
+
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [done, setDone] = useState(false)
+
+    const sendContact = () => {
+        if (email && message) {
+            // sendLocation
+            setDone(true)
+        }
+        else {
+            alert("Please enter both fields")
+        }
     }
     return <div id="contact" className={styles.contact}>
        <div className={styles.contact__container}>
@@ -20,14 +35,25 @@ export function Contact({video_link}) {
                 </p>
             </div>
 
-            <div className={styles.contact__form}>
-                <input placeholder="Your email"></input>
-                <textarea placeholder="Your note"></textarea>
-                <div style={ctabox}>
+            {
+               !done ? (
+                    <div className={styles.contact__form} >
+                        <input onChange={(value) => {
+                            setEmail(value)
+                        }} placeholder="Your email"></input>
+                        <textarea onChange={(v) => setMessage(v)} placeholder="Your note"></textarea>
+                        <div style={ctabox}>
 
-                    <Button text='Reach out' ></Button>
-                </div>
-            </div>
+                            <Button text='Reach out' onClick={() => sendContact()} ></Button>
+                        </div>
+                    </div>
+
+                ): (
+                    <div className={styles.contact__form}>
+                        Thank you for reaching out to us, we'll get back to you in less than 6 hours.
+                    </div>
+                )
+            }
        </div>
     </div>
 }

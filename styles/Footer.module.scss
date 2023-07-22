@@ -32,6 +32,9 @@
             font-size: 16px;
             text-decoration: none;
             color: whitesmoke !important;
+            line-height: 32px;
+            font-weight: 300;
+
             @media screen and (max-width: 768px){
                line-height: 32px;
             }
@@ -44,6 +47,9 @@
             align-items: center;
             margin-bottom: 8px;
             font-size: 16px;
+            line-height: 32px;
+            font-weight: 300;
+
             @media screen and (max-width: 768px){
                 line-height: 32px;
              }
