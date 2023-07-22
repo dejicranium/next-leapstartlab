@@ -129,8 +129,26 @@ $text-color:       rgb(219, 219, 219);
       height: auto;
       margin: auto;
       margin-top: 50px;
-      padding: 8px 16px;
+      padding: 10px 16px;
       border-radius: 20px;
+      background-color: rgba(228, 228, 223, 0.107);
+      border: 2px solid whitesmoke;
+
+      @media screen and (max-width: 768px) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      img {
+        @media screen and (max-width: 768px) {
+          height: 65px;
+          width: 50%;
+          margin: auto;
+        }
+      }
 
       
 
@@ -140,7 +158,7 @@ $text-color:       rgb(219, 219, 219);
       text-align: center;
       font-size: 16px;
       font-weight: 500;
-      font-family: "Quicksand", sans-serif !important;
+      font-family: 'Quicksand', sans-serif !important;        
 
     }
 
@@ -289,10 +307,7 @@ $text-color:       rgb(219, 219, 219);
       margin-top: 16px;
     
 
-    :hover,
-    :focus {
-     // background-color: #F082AC;
-    }
+    
   }
       
 

@@ -9,8 +9,8 @@ export function Footer({video_link}) {
             </div>
 
             <div className={styles.footer__links}>
-              <a>About us</a>
-              <a>Projects</a>
+              <a href="#hero">About us</a>
+              <a href="#projects">Projects</a>
             </div>
             <div className={styles.footer__links}>
               <span>

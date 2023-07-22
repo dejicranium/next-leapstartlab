@@ -30,6 +30,12 @@
         a {
             margin-bottom: 8px;
             font-size: 16px;
+            text-decoration: none;
+            color: whitesmoke !important;
+            @media screen and (max-width: 768px){
+               line-height: 32px;
+            }
+
         }
         
 
@@ -38,6 +44,9 @@
             align-items: center;
             margin-bottom: 8px;
             font-size: 16px;
+            @media screen and (max-width: 768px){
+                line-height: 32px;
+             }
 
             
             svg {
