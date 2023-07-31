@@ -57,6 +57,11 @@ export default function Home() {
       thumbnail: "https://i.ibb.co/G95009n/Screenshot-2023-07-20-at-04-07-53.png",
       description: "APIs for Open Banking in Nigeria",
       link: "https://openbanking.ng"
+    },
+      {name: "Hide Site Icon",
+      thumbnail: "https://i.ibb.co/sjqhhFX/Screenshot-2023-07-31-at-14-07-35.png",
+      description: "Small Chrome Extension for Hiding Site Favicon",
+      link: "https://chrome.google.com/webstore/detail/hide-site-icon/nenmodoafkjgnaliofbogihbepnheekg"
     }
   ]
 
